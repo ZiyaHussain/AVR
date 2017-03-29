@@ -1,0 +1,29 @@
+$positive: #1A59C8;
+$dark: #000000;
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+@import "../www/lib/ionic/scss";
+@import url('https: //fonts.googleapis.com/css?family=Audiowide');
+.Audiowide {
+	font-family: 'Audiowide';
+}
+
+@import url('https: //fonts.googleapis.com/css?family=Oswald: 700');
+.Oswald {
+	font-family: 'Oswald';
+}
+
+.red {
+	background-color: #EF473A !important;
+}
+
+.side-menu-item {
+	background: none;
+	.item-content {
+		background: none;
+	}
+	
+}
+ion-view,.pane,.view {
+	background-color: #000000;
+}
+
