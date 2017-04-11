@@ -5,14 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives', 'app.services','ng.Cordova'])
-
-app.controller('CameraCtrl', function ($scope) {
-    $scope.pictureURl = 'http://placehold.it/300x300';
-    $scope.takePicture = function () {
-
-    };
-})
+angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services',])
 
 .config(function($ionicConfigProvider, $sceDelegateProvider){
   
@@ -23,7 +16,7 @@ app.controller('CameraCtrl', function ($scope) {
 
 })
 
-.run(function ($ionicPlatform) {
+.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -35,7 +28,6 @@ app.controller('CameraCtrl', function ($scope) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-
   });
 })
 
@@ -91,6 +83,4 @@ app.controller('CameraCtrl', function ($scope) {
       });
     }
   };
-})
-
-
+});
