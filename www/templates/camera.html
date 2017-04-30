@@ -2,5 +2,28 @@
   <ion-content padding="true" style="background: url(img/Lz0Bm8SmQZmlq5wl5B9J_7WwoZFYKQgOpQb7yDcKR_869506new.jpg) no-repeat center;background-size:cover;" class="has-header">
     <button id="camera-button4" class="button button-positive  button-block">take picture</button>
     <button id="camera-button5" class="button button-positive  button-block">select from gallery</button>
+
+      <button class="button button-full button-assertive" ng-click="setOptions()">
+          Take Photo
+      </button>
+      <button class="button button-full button-assertive" ng-click="choosePhoto()">
+          Choose Photo
+      </button>
+      function setOptions(srcType) {
+      var options = {
+      // Some common settings are 20, 50, and 100
+      quality: 50,
+      destinationType: Camera.DestinationType.FILE_URI,
+      // In this app, dynamically set the picture source, Camera or photo gallery
+      sourceType: srcType,
+      encodingType: Camera.EncodingType.JPEG,
+      mediaType: Camera.MediaType.PICTURE,
+      allowEdit: true,
+      correctOrientation: true  //Corrects Android orientation quirks
+      }
+      return options;
+      }
+
+
   </ion-content>
 </ion-view>
